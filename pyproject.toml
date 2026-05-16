@@ -1,0 +1,15 @@
+[project]
+name = "jucurutu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "osmnx>=2.1.0",
+]
+
+[tool.pyright]
+reportUnknownVariableType = false
+reportUnknownMemberType = false
+reportUnknownArgumentType = false
+
