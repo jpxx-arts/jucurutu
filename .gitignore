@@ -9,3 +9,7 @@ cache
 
 # Virtual environments
 .venv
+
+# Project directories
+learn/
+outputs/
