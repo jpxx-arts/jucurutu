@@ -70,12 +70,15 @@ Uma visualização geográfica dedicada exclusivamente a revelar a centralidade 
 ### Subgrafo de Alta Conectividade (K-Core Maior)
 
 Aplicamos um filtro para exibir apenas o subgrafo correspondente ao k-core 2. Escolhemos isolar esse k por ele representar a espinha dorsal da cidade. Ao ocultar a periferia, visualizamos apenas o núcleo estrutural contínuo, formado por vias que oferecem rotas alternativas e garantem fluxo constante sem "becos sem saída".
+
+
 <img src="./graph_figures/k-core2.png" alt="Visualização Geográfica" width="600">
 
 
 ## Top Hubs Topológicos (Top 10% dos nós por grau)
 
 Aplicamos um filtro de grau para exibir exclusivamente os maiores cruzamentos da cidade (nós de graus 4 e 5). Estatisticamente, essa seleção reteve 155 nós, o que representa 16,1% da malha viária (de um total de 963 nós). Devido à natureza discreta e exata do grafo, não é possível aplicar um corte arbitrário de exatos "10%": exibir apenas o grau 5 representaria menos de 1% da rede, enquanto a inclusão necessária do grau 4 ajusta a amostra para os 16,1% reais.
+
 <img src="./graph_figures/degree_range.png" alt="Visualização Geográfica" width="600">
 
 ### Esqueleto Estrutural (ForceAtlas 2)
