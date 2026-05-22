@@ -53,3 +53,33 @@ Sim, fazem todo o sentido. Cidades do interior cortadas por acidentes geográfic
 
 ## Principais Conclusões
 O uso de métricas de grafos permitiu identificar matematicamente o que a intuição sobre a cidade sugere: Jucurutu possui uma malha viária fortemente dependente de um pequeno conjunto de vias de ligação. O planejamento urbano deve observar com atenção esses cruzamentos de alta centralidade de intermediação, pois acidentes ou interdições nestes nós causam um impacto muito maior à mobilidade do município do que em qualquer outro local da malha.
+
+## Análise Visual da Rede Urbana no Gephi
+
+### Visualização Geográfica (Geo Layout Base)
+
+Nesta configuração, a rede foi posicionada fielmente às suas coordenadas reais de latitude e longitude. Para facilitar a leitura estrutural, aplicamos um "combo" de atributos visuais: a cor diferencia o core number (rosa para o núcleo contínuo, verde para a periferia) e o tamanho dos nós é proporcional ao seu grau (evidenciando os cruzamentos de maior fluxo). Inicialmente, a intenção era destacar também a métrica de betweenness centrality através de rótulos de texto (labels). Contudo, devido a limitações na renderização de exportação do Gephi — onde os textos ficavam ilegíveis ou não eram renderizados corretamente, optamos por solucionar o problema criando um mapa de calor dedicado exclusivamente a essa métrica na visualização posterior.
+<img src="./graph_figures/graph.png" alt="Visualização Geográfica" width="600">
+
+### Mapa de Gargalos (Betweenness Centrality)
+
+Uma visualização geográfica dedicada exclusivamente a revelar a centralidade de intermediação. Utilizando um gradiente de cor e tamanho em tons de roxo, este mapa destaca os verdadeiros "gargalos" viários do município. Ficam evidentes os pontos críticos de articulação e passagem obrigatória, onde uma interdição causaria o maior impacto na fluidez geral.
+
+<img src="./graph_figures/betweenness.png" alt="Visualização Geográfica" width="600">
+
+### Subgrafo de Alta Conectividade (K-Core Maior)
+
+Aplicamos um filtro para exibir apenas o subgrafo correspondente ao k-core 2. Escolhemos isolar esse k por ele representar a espinha dorsal da cidade. Ao ocultar a periferia, visualizamos apenas o núcleo estrutural contínuo, formado por vias que oferecem rotas alternativas e garantem fluxo constante sem "becos sem saída".
+<img src="./graph_figures/k-core2.png" alt="Visualização Geográfica" width="600">
+
+
+## Top Hubs Topológicos (Top 10% dos nós por grau)
+
+Aplicamos um filtro de grau para exibir exclusivamente os maiores cruzamentos da cidade (nós de graus 4 e 5). Estatisticamente, essa seleção reteve 155 nós, o que representa 16,1% da malha viária (de um total de 963 nós). Devido à natureza discreta e exata do grafo, não é possível aplicar um corte arbitrário de exatos "10%": exibir apenas o grau 5 representaria menos de 1% da rede, enquanto a inclusão necessária do grau 4 ajusta a amostra para os 16,1% reais.
+<img src="./graph_figures/degree_range.png" alt="Visualização Geográfica" width="600">
+
+### Esqueleto Estrutural (ForceAtlas 2)
+
+O algoritmo atua como uma atração magnética: nós fortemente conectados (grandes hubs e o núcleo) são puxados para o centro, enquanto conexões fracas são repelidas para as bordas. Isso escancara a densidade da rede e os centros de gravidade do tráfego, independentemente da distância física entre as vias.
+
+<img src="./graph_figures/atlas.png" alt="Visualização Geográfica" width="600">
