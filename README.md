@@ -1,11 +1,17 @@
 # Análise Estrutural da Malha Viária de Jucurutu, RN
 
+## Grupo 12
+
+- João Pedro Araújo Ramalho
+- Kiev Luiz Freitas Guedes
+- Maria Eduarda Silva da Costa
+
 ## Identificação da Região
 **Região Analisada:** Jucurutu, Rio Grande do Norte, Brasil.
 Jucurutu é um município no interior do Rio Grande do Norte, caracterizado por ser cortado pelo Rio Piranhas-Açu, o que cria gargalos naturais de mobilidade (como pontes e vias de acesso principais).
 
 ## Vídeo de Apresentação
-[Link do Vídeo no Loom](#) *(Inserir link do vídeo aqui)*
+[Link do Vídeo no Loom](https://www.loom.com/share/4a89010c9bd6480b943850870898058a)
 
 ## Objetivo do Trabalho
 O objetivo deste trabalho é aplicar conceitos de teoria dos grafos em uma rede real, interpretando a malha viária da cidade de Jucurutu como um grafo. A proposta busca identificar nós centrais (hubs), regiões estruturalmente densas (k-core) e pontos críticos de conexão (betweenness), indo além da execução de código para obter uma interpretação crítica urbana.
